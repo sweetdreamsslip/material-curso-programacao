@@ -4,9 +4,24 @@
 {% block content %}
 <div class="app-layout">
     {% include "components/sidebar.html" %}
-    <main class="app-main">
-        <div class="container-fluid px-0">
-            <h1>HARO EVURINYAN</h1>
+    <main class="app-main app-main--center">
+        <div class="topic-cards">
+            <a href="#" class="topic-card topic-card--yellow">
+                <img
+                    src="{% static 'images/computacao_desplugada_card.webp' %}"
+                    alt="Computação desplugada"
+                    class="topic-card__image topic-card__image--feature"
+                >
+                <span class="topic-card__title">Computação desplugada</span>
+            </a>
+            <a href="#" class="topic-card topic-card--teal">
+                <img
+                    src="{% static 'images/python-logo.png' %}"
+                    alt="Python"
+                    class="topic-card__image topic-card__image--logo"
+                >
+                <span class="topic-card__title">Python</span>
+            </a>
         </div>
     </main>
 </div>
