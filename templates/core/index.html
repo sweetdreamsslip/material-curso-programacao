@@ -1,7 +1,17 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-<div class="container">
-    <h1>HARO EVURINYAN</h1>
+<div class="app-layout">
+    {% include "components/sidebar.html" %}
+    <main class="app-main">
+        <div class="container-fluid px-0">
+            <h1>HARO EVURINYAN</h1>
+        </div>
+    </main>
 </div>
 {% endblock content %}
+
+{% block scripts %}
+<script src="{% static 'js/sidebar.js' %}"></script>
+{% endblock scripts %}

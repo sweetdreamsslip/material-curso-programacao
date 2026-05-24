@@ -1,0 +1,93 @@
+<button
+    type="button"
+    class="sidebar-toggle"
+    aria-label="Abrir menu"
+    aria-expanded="false"
+    aria-controls="app-sidebar"
+    data-sidebar-toggle
+>
+    <span class="material-icons" aria-hidden="true">menu</span>
+</button>
+
+<div class="sidebar-backdrop" data-sidebar-backdrop hidden></div>
+
+<aside class="sidebar" id="app-sidebar" data-sidebar aria-label="Menu lateral">
+    <div class="sidebar__header">
+        <a href="#" class="sidebar__brand">
+            <span class="sidebar__brand-mark">I</span>
+            <span class="sidebar__brand-text">Inovaí</span>
+        </a>
+        <button
+            type="button"
+            class="sidebar__close"
+            aria-label="Fechar menu"
+            data-sidebar-close
+        >
+            <span class="material-icons" aria-hidden="true">close</span>
+        </button>
+    </div>
+
+    <nav class="sidebar__nav">
+        <ul class="sidebar__list">
+            <li>
+                <a href="#" class="sidebar__link sidebar__link--active">
+                    <span class="material-icons sidebar__icon" aria-hidden="true">home</span>
+                    <span class="sidebar__label">Início</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="sidebar__link">
+                    <span class="material-icons sidebar__icon" aria-hidden="true">menu_book</span>
+                    <span class="sidebar__label">Aulas</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="sidebar__link">
+                    <span class="material-icons sidebar__icon" aria-hidden="true">assignment</span>
+                    <span class="sidebar__label">Exercícios</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="sidebar__link">
+                    <span class="material-icons sidebar__icon" aria-hidden="true">code</span>
+                    <span class="sidebar__label">Projetos</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="sidebar__link">
+                    <span class="material-icons sidebar__icon" aria-hidden="true">groups</span>
+                    <span class="sidebar__label">Turmas</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="sidebar__link">
+                    <span class="material-icons sidebar__icon" aria-hidden="true">bar_chart</span>
+                    <span class="sidebar__label">Relatórios</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="sidebar__footer">
+        <ul class="sidebar__list">
+            <li>
+                <a href="#" class="sidebar__link">
+                    <span class="material-icons sidebar__icon" aria-hidden="true">settings</span>
+                    <span class="sidebar__label">Configurações</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="sidebar__link">
+                    <span class="material-icons sidebar__icon" aria-hidden="true">help_outline</span>
+                    <span class="sidebar__label">Ajuda</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="sidebar__link">
+                    <span class="material-icons sidebar__icon" aria-hidden="true">logout</span>
+                    <span class="sidebar__label">Sair</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</aside>
