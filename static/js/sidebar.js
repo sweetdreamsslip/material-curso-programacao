@@ -52,7 +52,28 @@
 
     backdrop.addEventListener('click', closeSidebar);
 
-    sidebar.querySelectorAll('.sidebar__link').forEach(function (link) {
+    sidebar.querySelectorAll('[data-sidebar-submenu-toggle]').forEach(function (button) {
+        button.addEventListener('click', function () {
+            const submenuId = button.getAttribute('aria-controls');
+            const submenu = submenuId ? document.getElementById(submenuId) : null;
+
+            if (!submenu) {
+                return;
+            }
+
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            const group = button.closest('.sidebar__group');
+
+            button.setAttribute('aria-expanded', String(!isExpanded));
+            submenu.hidden = isExpanded;
+
+            if (group) {
+                group.classList.toggle('is-open', !isExpanded);
+            }
+        });
+    });
+
+    sidebar.querySelectorAll('.sidebar__link:not(.sidebar__link--toggle)').forEach(function (link) {
         link.addEventListener('click', function () {
             if (isMobile()) {
                 closeSidebar();

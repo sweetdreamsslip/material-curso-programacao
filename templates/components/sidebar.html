@@ -1,3 +1,4 @@
+{% load static %}
 <button
     type="button"
     class="sidebar-toggle"
@@ -35,11 +36,36 @@
                     <span class="sidebar__label">Início</span>
                 </a>
             </li>
-            <li>
-                <a href="#" class="sidebar__link">
+            <li class="sidebar__group">
+                <button
+                    type="button"
+                    class="sidebar__link sidebar__link--toggle"
+                    aria-expanded="false"
+                    aria-controls="sidebar-submenu-aulas"
+                    data-sidebar-submenu-toggle
+                >
                     <span class="material-icons sidebar__icon" aria-hidden="true">menu_book</span>
                     <span class="sidebar__label">Aulas</span>
-                </a>
+                    <span class="material-icons sidebar__chevron" aria-hidden="true">expand_more</span>
+                </button>
+                <ul class="sidebar__sublist" id="sidebar-submenu-aulas" hidden>
+                    <li>
+                        <a href="#" class="sidebar__link sidebar__link--sub">
+                            <span class="material-icons sidebar__icon" aria-hidden="true">psychology</span>
+                            <span class="sidebar__label">Computação desplugada</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar__link sidebar__link--sub">
+                            <img
+                                src="{% static 'images/python-logo-no-text.png' %}"
+                                alt=""
+                                class="sidebar__icon sidebar__icon--image"
+                            >
+                            <span class="sidebar__label">Python</span>
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li>
                 <a href="#" class="sidebar__link">
