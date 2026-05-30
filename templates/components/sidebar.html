@@ -14,7 +14,7 @@
 
 <aside class="sidebar" id="app-sidebar" data-sidebar aria-label="Menu lateral">
     <div class="sidebar__header">
-        <a href="#" class="sidebar__brand">
+        <a href="{% url 'core:index' %}" class="sidebar__brand">
             <span class="sidebar__brand-mark">I</span>
             <span class="sidebar__brand-text">Inovaí</span>
         </a>
@@ -31,7 +31,7 @@
     <nav class="sidebar__nav">
         <ul class="sidebar__list">
             <li>
-                <a href="#" class="sidebar__link sidebar__link--active">
+                <a href="{% url 'core:index' %}" class="sidebar__link sidebar__link--active">
                     <span class="material-icons sidebar__icon" aria-hidden="true">home</span>
                     <span class="sidebar__label">Início</span>
                 </a>
@@ -50,7 +50,7 @@
                 </button>
                 <ul class="sidebar__sublist" id="sidebar-submenu-aulas" hidden>
                     <li>
-                        <a href="#" class="sidebar__link sidebar__link--sub">
+                        <a href="{% url 'material:desplugada' %}" class="sidebar__link sidebar__link--sub">
                             <span class="material-icons sidebar__icon" aria-hidden="true">psychology</span>
                             <span class="sidebar__label">Computação desplugada</span>
                         </a>
@@ -117,3 +117,4 @@
         </ul>
     </div>
 </aside>
+<script src="{% static 'js/sidebar.js' %}"></script>

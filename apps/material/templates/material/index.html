@@ -6,7 +6,7 @@
     {% include "components/sidebar.html" %}
     <main class="app-main app-main--center">
         <div class="topic-cards">
-            <a href="{% url 'material:desplugada' %}" class="topic-card topic-card--yellow">
+            <a href="#" class="topic-card topic-card--yellow">
                 <img
                     src="{% static 'images/computacao_desplugada_card.webp' %}"
                     alt="Computação desplugada"
@@ -26,3 +26,7 @@
     </main>
 </div>
 {% endblock content %}
+
+{% block scripts %}
+<script src="{% static 'js/sidebar.js' %}"></script>
+{% endblock scripts %}

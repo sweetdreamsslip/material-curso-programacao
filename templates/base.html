@@ -19,7 +19,9 @@
         body {
             font-family: 'Roboto', sans-serif;
             min-height: 100vh;
-            background-image: url("{% static 'images/wrinkled-paper-background.jpg' %}");
+            background-image:
+                linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.5)),
+                url("{% static 'images/wrinkled-paper-background.jpg' %}");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
